@@ -22,7 +22,7 @@ module TmdbApiClient
     # @param timeout_in_seconds [Long]
     # @param api_key [String]
     # @return [TmdbApiClient::RequestClient]
-    def initialize(api_key:, base_url: nil, environment: TmdbApiClient::Environment::DEFAULT, max_retries: nil,
+    def initialize(api_key:, base_url: nil, environment: TmdbApiClient::Environment::PRODUCTION, max_retries: nil,
                    timeout_in_seconds: nil)
       @default_environment = environment
       @base_url = environment || base_url
@@ -43,7 +43,7 @@ module TmdbApiClient
 
     # @return [Hash{String => String}]
     def get_headers
-      headers = { "X-Fern-Language": "Ruby", "X-Fern-SDK-Name": "tmdb_ryanstep", "X-Fern-SDK-Version": "1.0.0" }
+      headers = { "X-Fern-Language": "Ruby", "X-Fern-SDK-Name": "tmdb_ryanstep", "X-Fern-SDK-Version": "1.0.1" }
       headers["Authorization"] = ((@api_key.is_a? Method) ? @api_key.call : @api_key) unless @api_key.nil?
       headers
     end
@@ -65,7 +65,7 @@ module TmdbApiClient
     # @param timeout_in_seconds [Long]
     # @param api_key [String]
     # @return [TmdbApiClient::AsyncRequestClient]
-    def initialize(api_key:, base_url: nil, environment: TmdbApiClient::Environment::DEFAULT, max_retries: nil,
+    def initialize(api_key:, base_url: nil, environment: TmdbApiClient::Environment::PRODUCTION, max_retries: nil,
                    timeout_in_seconds: nil)
       @default_environment = environment
       @base_url = environment || base_url
@@ -87,7 +87,7 @@ module TmdbApiClient
 
     # @return [Hash{String => String}]
     def get_headers
-      headers = { "X-Fern-Language": "Ruby", "X-Fern-SDK-Name": "tmdb_ryanstep", "X-Fern-SDK-Version": "1.0.0" }
+      headers = { "X-Fern-Language": "Ruby", "X-Fern-SDK-Name": "tmdb_ryanstep", "X-Fern-SDK-Version": "1.0.1" }
       headers["Authorization"] = ((@api_key.is_a? Method) ? @api_key.call : @api_key) unless @api_key.nil?
       headers
     end

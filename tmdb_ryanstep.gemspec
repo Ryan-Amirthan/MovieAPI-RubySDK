@@ -4,7 +4,7 @@ require_relative "lib/gemconfig"
 
 Gem::Specification.new do |spec|
   spec.name = "tmdb_ryanstep"
-  spec.version = "1.0.0"
+  spec.version = "1.0.1"
   spec.authors = TmdbApiClient::Gemconfig::AUTHORS
   spec.email = TmdbApiClient::Gemconfig::EMAIL
   spec.summary = TmdbApiClient::Gemconfig::SUMMARY

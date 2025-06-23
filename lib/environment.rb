@@ -2,6 +2,7 @@
 
 module TmdbApiClient
   class Environment
-    DEFAULT = "https://api.themoviedb.org"
+    PRODUCTION = "https://api.themoviedb.org"
+    STAGING = "https://api.themoviedb.org/staging"
   end
 end

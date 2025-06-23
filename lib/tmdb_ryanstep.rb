@@ -40,7 +40,7 @@ module TmdbApiClient
     # @param timeout_in_seconds [Long]
     # @param api_key [String]
     # @return [TmdbApiClient::Client]
-    def initialize(api_key:, base_url: nil, environment: TmdbApiClient::Environment::DEFAULT, max_retries: nil,
+    def initialize(api_key:, base_url: nil, environment: TmdbApiClient::Environment::PRODUCTION, max_retries: nil,
                    timeout_in_seconds: nil)
       @request_client = TmdbApiClient::RequestClient.new(
         base_url: base_url,
@@ -58,7 +58,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.auth_create_request_token(raw_body: "RAW_BODY")
@@ -87,7 +87,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.auth_create_access_token(raw_body: "RAW_BODY")
@@ -117,7 +117,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.auth_logout(raw_body: "RAW_BODY")
@@ -149,7 +149,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.list_details(list_id: 1)
@@ -184,7 +184,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.list_update(list_id: 1, raw_body: "RAW_BODY")
@@ -214,7 +214,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.list_create(raw_body: "RAW_BODY")
@@ -244,7 +244,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.list_clear(list_id: 1)
@@ -276,7 +276,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.list_delete(list_id: 1)
@@ -309,7 +309,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.list_add_items(list_id: 1, raw_body: "RAW_BODY")
@@ -340,7 +340,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.list_update_items(list_id: "list_id", raw_body: "RAW_BODY")
@@ -371,7 +371,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.list_remove_items(list_id: 1, raw_body: "RAW_BODY")
@@ -403,7 +403,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.list_item_status(
@@ -442,7 +442,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.account_lists(account_object_id: "account_object_id")
@@ -475,7 +475,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.account_favorite_movies(account_object_id: "account_object_id")
@@ -513,7 +513,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.account_favorite_tv(account_object_id: "account_object_id")
@@ -550,7 +550,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.account_tv_recommendations(account_object_id: "account_object_id")
@@ -586,7 +586,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.account_movie_recommendations(account_object_id: "account_object_id")
@@ -623,7 +623,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.account_movie_watchlist(account_object_id: "account_object_id")
@@ -661,7 +661,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.account_tv_watchlist(account_object_id: "account_object_id")
@@ -699,7 +699,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.account_rated_movies(account_object_id: "account_object_id")
@@ -737,7 +737,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.account_rated_tv(account_object_id: "account_object_id")
@@ -770,7 +770,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.getting_started
@@ -801,7 +801,7 @@ module TmdbApiClient
     # @param timeout_in_seconds [Long]
     # @param api_key [String]
     # @return [TmdbApiClient::AsyncClient]
-    def initialize(api_key:, base_url: nil, environment: TmdbApiClient::Environment::DEFAULT, max_retries: nil,
+    def initialize(api_key:, base_url: nil, environment: TmdbApiClient::Environment::PRODUCTION, max_retries: nil,
                    timeout_in_seconds: nil)
       @async_request_client = TmdbApiClient::AsyncRequestClient.new(
         base_url: base_url,
@@ -819,7 +819,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.auth_create_request_token(raw_body: "RAW_BODY")
@@ -848,7 +848,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.auth_create_access_token(raw_body: "RAW_BODY")
@@ -878,7 +878,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.auth_logout(raw_body: "RAW_BODY")
@@ -910,7 +910,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.list_details(list_id: 1)
@@ -945,7 +945,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.list_update(list_id: 1, raw_body: "RAW_BODY")
@@ -975,7 +975,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.list_create(raw_body: "RAW_BODY")
@@ -1005,7 +1005,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.list_clear(list_id: 1)
@@ -1037,7 +1037,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.list_delete(list_id: 1)
@@ -1070,7 +1070,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.list_add_items(list_id: 1, raw_body: "RAW_BODY")
@@ -1101,7 +1101,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.list_update_items(list_id: "list_id", raw_body: "RAW_BODY")
@@ -1132,7 +1132,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.list_remove_items(list_id: 1, raw_body: "RAW_BODY")
@@ -1164,7 +1164,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.list_item_status(
@@ -1203,7 +1203,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.account_lists(account_object_id: "account_object_id")
@@ -1236,7 +1236,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.account_favorite_movies(account_object_id: "account_object_id")
@@ -1274,7 +1274,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.account_favorite_tv(account_object_id: "account_object_id")
@@ -1311,7 +1311,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.account_tv_recommendations(account_object_id: "account_object_id")
@@ -1347,7 +1347,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.account_movie_recommendations(account_object_id: "account_object_id")
@@ -1384,7 +1384,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.account_movie_watchlist(account_object_id: "account_object_id")
@@ -1422,7 +1422,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.account_tv_watchlist(account_object_id: "account_object_id")
@@ -1460,7 +1460,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.account_rated_movies(account_object_id: "account_object_id")
@@ -1498,7 +1498,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.account_rated_tv(account_object_id: "account_object_id")
@@ -1531,7 +1531,7 @@ module TmdbApiClient
     # @example
     #  api = TmdbApiClient::Client.new(
     #    base_url: "https://api.example.com",
-    #    environment: TmdbApiClient::Environment::DEFAULT,
+    #    environment: TmdbApiClient::Environment::PRODUCTION,
     #    api_key: "YOUR_API_KEY"
     #  )
     #  api.getting_started
